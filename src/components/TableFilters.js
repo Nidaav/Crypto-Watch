@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { setStableState } from "../actions/stable.action";
 
 const TableFilters = () => {
   const [showStable, setShowStable] = useState(true);
   const [showFavList, setFavList] = useState(false);
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(setStableState(showStable));
+  }, [showStable])
   return (
     <div className="table-filters">
       <div className="table-filters-container">
