@@ -1,6 +1,6 @@
 import { SET_LIST_DISPLAY } from "../actions/list.action";
 
-const initialState = {}
+const initialState = {};
 
 export default function listReducer(state = initialState, action) {
   switch (action.type) {

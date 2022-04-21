@@ -1,6 +1,6 @@
 import { SET_STABLE_STATE } from "../actions/stable.action";
 
-const initialState = {}
+const initialState = {};
 
 export default function stableReducer(state = initialState, action) {
   switch (action.type) {
